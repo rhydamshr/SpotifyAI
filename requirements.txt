@@ -1,0 +1,1 @@
+pip install flask google.generativeai spotipy time python-dotenv
