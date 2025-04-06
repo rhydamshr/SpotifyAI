@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Spotify suggestor</title>
+
+    </head>
+    <body>
+        <h1>Spotify Playlist generator</h1>
+        <form method="POST">
+            <input type="text" name="user_input" placeholder="input your mood">
+            <button type="submit">Submit</button>
+            {% if spotify_link!=None %}
+                <p>generated spotify playlist: <a href={{spotify_link}}> click here</a></p>
+            {% endif %}
+        </form>
+    </body>
+</html>
