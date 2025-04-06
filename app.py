@@ -103,3 +103,5 @@ def form():
 
         return flask.render_template('form.html', spotify_link=f"{playlist['external_urls']['spotify']}")
     return flask.render_template('form.html', spotify_link=None)
+
+app.run(host='0.0.0.0', port=5000, debug=True)
