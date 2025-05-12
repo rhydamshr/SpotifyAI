@@ -91,10 +91,8 @@ def form():
             song,artist=i.split('-')[0],i.split('-')[1]
             query=f'song:{song} artist:{artist}'
             result=sp.search(q=query, type='track', limit=1)
-            print(result)
             items=result['tracks']['items']
             if items:
-                print(items)
                 track_uris.append(items[0]['uri'])
         user_id = sp.current_user()['id']
         playlist = sp.user_playlist_create(user=user_id, name=f"{input}", public=True, description="AI-generated playlist")
